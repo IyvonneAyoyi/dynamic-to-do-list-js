@@ -35,7 +35,7 @@ function loadTasksFromLocalStorage() {
         const taskText = taskInput.value.trim();
 
         // if empty, alert user
-        
+        if (taskText === '') {
             alert('Please enter a task.');
             return;
         }
