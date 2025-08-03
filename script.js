@@ -11,6 +11,24 @@ document.addEventListener('DOMContentLoaded', function() {
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
+
+// Load tasks from localStorage and render them
+function loadTasksFromLocalStorage() {
+    const stored = localStorage.getItem('tasks');
+    if (stored) {
+        try {
+            const parsed = JSON.parse(stored);
+            if (Array.isArray(parsed)) {
+                tasks = parsed;
+                tasks.forEach(createTaskElement);
+            }
+        } catch (e) {
+            console.warn('Failed to parse tasks from localStorage', e);
+            tasks = [];
+        }
+    }
+}
+
 // 3. Create the addTask Function:
     function addTask() {
         // retrieve and trim the value
