@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const taskInput = document.getElementById('task-input');
     const taskList = document.getElementById('task-list');
 
-    let tasks =;
+    let tasks =[];
 // Save current tasks to localStorage
     function saveTasksToLocalStorage() {
     localStorage.setItem('tasks', JSON.stringify(tasks));
