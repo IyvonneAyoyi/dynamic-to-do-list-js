@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let tasks =[];
 // Save current tasks to localStorage
     function saveTasksToLocalStorage() {
-    localStorage.setItem('tasks', JSON.stringify(tasks));
+    localStorage.setItem('tasks', JSON.stringfy(tasks));
 }
 
 
@@ -36,7 +36,7 @@ function loadTasksFromLocalStorage() {
 
         // if empty, alert user
         if (taskText === '') {
-            ('Please enter a task.');
+            alert('Please enter a task.');
             return;
         }
 
