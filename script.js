@@ -1,12 +1,12 @@
-// 1,2 Add event listener and select DOM Elements
-document.addEventListener('DOMContentLoaded', () => {
+// 1,2 Add event listener for page load and select DOM Elements
+document.addEventListener('DOMContentLoaded', function() {
 
     const addButton = document.getElementById('add-task-btn');
     const taskInput = document.getElementById('task-input');
     const taskList = document.getElementById('task-list');
 
 // 3. Create the addTask Function:
-    const addTask = () => {
+    function addTask() {
         // retrieve and trim the value
         const taskText = taskInput.value.trim();
 
