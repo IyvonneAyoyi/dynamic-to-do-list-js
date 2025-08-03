@@ -1,6 +1,6 @@
 // 1,2 Add event listener and select DOM Elements
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     const addButton = document.getElementById('add-task-btn');
     const taskInput = document.getElementById('task-input');
     const taskList = document.getElementById('task-list');
@@ -15,3 +15,26 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Please enter a task.');
             return;
         }
+
+// 4. Task Creation and Removal:
+        // create a list(li) element
+        const li = document.createElement('li');
+        li.textContent = taskText;
+
+        // create remove button
+        const removeBtn = document.createElement('button');
+        removeBtn.textContent = 'Remove';
+        removeBtn.className = 'remove-btn';
+
+        // assign onclick to remove the task
+        removeBtn.onclick = () => {
+            taskList.removeChild(li);
+        };    
+        
+        // append remove button to li, then li to list
+        li.appendChild(removeBtn);
+        taskList.appendChild(li);
+
+        // clear input field
+        taskInput.value = '';
+    };
