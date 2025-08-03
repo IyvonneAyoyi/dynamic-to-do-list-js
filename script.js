@@ -38,3 +38,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // clear input field
         taskInput.value = '';
     };
+// 5. Add Event Listeners:
+    // addButton click
+    addButton.addEventListener('click', addTask);
+
+    // Allow Enter key to add task
+    taskInput.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+            addTask();
+        }
+    });
