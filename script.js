@@ -24,7 +24,7 @@ function loadTasksFromLocalStorage() {
             }
         } catch (e) {
             console.warn('Failed to parse tasks from localStorage', e);
-            tasks = [];
+            tasks = ;
         }
     }
 }
